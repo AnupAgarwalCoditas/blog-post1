@@ -16,16 +16,16 @@ function AddPostPage(props) {
 
     if(!props.token)return <Redirect to="/"/>
     return (
-        <form onSubmit={e=>e.preventDefault()} className='addPost'>
-            <div className='formHeading'>
+        <form onSubmit={e=>e.preventDefault()} className='add-post'>
+            <div className='form-heading'>
                 <h1>Add Post</h1>
             </div>
-            <div className='formBody'>
-                <input type='text' value={title} placeholder='Title...' onChange={e=>inputHandler(setTitle,e)}></input>
-                <textarea rows='32' value={content}  placeholder='Content...' onChange={e=>inputHandler(setContent,e)}></textarea>
-                <div className='formButtons'>
-                    <button className='addButton' onClick={addPostHandler}>Add Post</button>
-                    <button className='cancelButton' onClick={onCancelHandler}>Cancel</button>
+            <div className='form-body'>
+                <input className='input' type='text' value={title} placeholder='Title...' onChange={e=>inputHandler(setTitle,e)}></input>
+                <textarea className='textarea' rows='32' value={content}  placeholder='Content...' onChange={e=>inputHandler(setContent,e)}></textarea>
+                <div className='form-buttons'>
+                    <button className='add-button' onClick={addPostHandler}>Add Post</button>
+                    <button className='cancel-button' onClick={onCancelHandler}>Cancel</button>
                 </div>
             </div>                
         </form>
@@ -37,7 +37,7 @@ let mapStateToProps = state => {
 }
 
 let mapDispatchToProps = dispatch => {
-    return { addPost : (post) => dispatch({type: 'addPost', ...post }) }
+    return { addPost : (post) => dispatch({type: 'ADD_POST', ...post }) }
 }
 
 export default connect(mapStateToProps,mapDispatchToProps)(AddPostPage);

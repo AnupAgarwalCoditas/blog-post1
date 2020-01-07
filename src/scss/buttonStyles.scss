@@ -1,8 +1,8 @@
-@import './colors.scss';
+@import './variables.scss';
 
-.addPostButton{
-    background-color: $color1;
-    color: $color2;
+.add-post-button{
+    background-color: $baseBlue;
+    color: $baseWhite;
     border-radius: 90%;
     padding: 20px;
     position: fixed;

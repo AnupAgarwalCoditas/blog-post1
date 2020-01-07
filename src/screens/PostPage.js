@@ -16,7 +16,7 @@ function PostPage(props) {
         return <p>Loading...............</p>
 
     return (
-        <div className='postPage'>
+        <div className='post-page'>
             <Post title={post.title} body={post.body}></Post>
         </div>
     )

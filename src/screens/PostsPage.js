@@ -17,16 +17,14 @@ function PostsPage(props) {
         }
         else if(posts.length===0)
             setPosts(props.posts)
-
-        return ()=>{}
     })
     
     if(!props.token)return <Redirect to="/"/>
-    if(props.posts.length===0)return <p>Loading...</p>
+    if(posts.length===0)return <p>Loading...</p>
     return(
-        <div className='postsPage'>
-            <header>
-                <h2>All Blog Posts</h2>
+        <div className='posts-page'>
+            <header className='header'>
+                <h2 className='h2'>All Blog Posts</h2>
             </header>
             <Posts className='posts' posts={posts}/>
             <AddPostButton clicked={()=>{props.history.push('/AddPost')}}/>
@@ -43,7 +41,7 @@ let mapStateToProps = state => {
 
 let mapDispatchToProps = dispatch => {
     return {
-        addPosts : (posts) => dispatch({type: 'addPosts', posts })
+        addPosts : (posts) => dispatch({type: 'ADD_POSTS', posts })
     }
 }
 

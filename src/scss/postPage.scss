@@ -1,15 +1,14 @@
-@import './colors.scss';
-$borderRadius : 10px;
+@import './variables.scss';
 
-.postPage{
+.post-page{
     width: 50%;
     margin: auto;
     margin-top: 5%;
-    article{
+    .post-article{
         border-radius: $borderRadius;
         box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-        header{
-            h1{
+        .post-header{
+            .post-h1{
                 box-sizing: border-box;
                 border-radius: $borderRadius;
                 border-bottom-right-radius: 0px;
@@ -20,11 +19,11 @@ $borderRadius : 10px;
                 width: 100%;
                 margin: auto;
                 margin-top: 0px;
-                color: $color2;
-                background-color: $color1;//#DDBA3E;
+                color: $baseWhite;
+                background-color: $baseBlue;//#DDBA3E;
             }
         }
-        blockquote{
+        .post-blockquote{
             padding: 30px 30px;
             border-radius: $borderRadius;
             border-top-right-radius: 0px;
@@ -32,10 +31,8 @@ $borderRadius : 10px;
             border-top-left-radius: 0px;
             width: 100%;
             margin: auto;
-            background-color: $color2;
-            color: $color1;
-            // background-color: white;
-            // color: #959595;
+            background-color: $baseWhite;
+            color: $baseBlue;
             min-height: 100px;
         }
     }

@@ -33,30 +33,27 @@ const initialState = {
 }
 
 const store = createStore((state=initialState,action)=>{
-  // console.log(action);
   switch(action.type){
-    case 'login':
+    case 'LOGIN':
       return {
         ...state,
         token: action.token
       }
-    case 'addPosts':
+    case 'ADD_POSTS':
       return {
         ...state,
         posts : action.posts
       }
-    case 'addPost':
+    case 'ADD_POST':
       const newPost = {
         id: state.posts.length+1,
         title: action.title,
         body: action.body,
         userId: state.posts.length+1
       }
-      const newPosts = [...state.posts]
-      newPosts.push(newPost)
       return {
         ...state,
-        posts : newPosts
+        posts : [...state.posts,newPost]
       }
     default:
       return state;

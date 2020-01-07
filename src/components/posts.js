@@ -2,7 +2,6 @@ import React from 'react'
 import Post from './post'
 
 export default function posts(props) {
-    // console.log('props', props)
     return (
         <div style={props.style} className={props.className}>
             {props.posts.map((post,index)=>{

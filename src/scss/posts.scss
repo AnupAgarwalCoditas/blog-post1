@@ -11,31 +11,31 @@
         transition: all 0.1s cubic-bezier(.25,.8,.25,1);
         margin-bottom: 10px;
         border-radius: 10px;
-        background-color: $color2;//white;
+        background-color: $baseWhite;//white;
         cursor: pointer;
-        header{
+        .post-header{
             border-radius: 10px 10px 0 0;
             min-height: 75px;
             display: flex;
             margin: 0px;
             color: white;
             box-sizing: border-box;
-            background-color: $color1;//#DDBA3E;
+            background-color: $baseBlue;//#DDBA3E;
             text-align: left;
             width: 100%;
             padding-left: 30px;
             align-items: center;
-            h1{
+            .post-h1{
                 min-height: 0px;
                 line-height: 20px;
                 margin: 0px;
                 padding: 10px;
                 font-size: 15px;
-                color: $color2;//white;
+                color: $baseWhite;//white;
             }
         }
-        blockquote{
-            color: $color1;//#959595;
+        .post-blockquote{
+            color: $baseBlue;//#959595;
         }
     }
     .post:hover {

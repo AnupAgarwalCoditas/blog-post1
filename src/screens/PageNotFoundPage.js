@@ -1,8 +1,9 @@
 import React from 'react'
+import '../scss/pageNotFoundPage.scss'
 
 export default function PageNotFoundPage() {
     return (
-        <div style={{position:'fixed',width:'100%',height:'100%',display:'flex',justifyContent:'center',alignItems:'center'}}>
+        <div className='page-not-found-page'>
             Page not found
         </div>
     )
