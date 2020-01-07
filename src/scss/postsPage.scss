@@ -1,0 +1,20 @@
+@import './colors.scss';
+
+.postsPage{
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    header{
+        min-height: 75px;
+        line-height: 75px;
+        margin: 0px;                
+        color: white;
+        background-color: $color1;//#DDBA3E;
+        text-align: center;
+        width: 100%;
+        h2{
+            color: $color2;//#f7f7f7;
+        }
+    }
+    @import './posts.scss';
+}

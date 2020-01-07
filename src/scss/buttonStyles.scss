@@ -1,0 +1,13 @@
+@import './colors.scss';
+
+.addPostButton{
+    background-color: $color1;
+    color: $color2;
+    border-radius: 90%;
+    padding: 20px;
+    position: fixed;
+    right: 30px;
+    bottom: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}

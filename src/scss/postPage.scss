@@ -1,0 +1,42 @@
+@import './colors.scss';
+$borderRadius : 10px;
+
+.postPage{
+    width: 50%;
+    margin: auto;
+    margin-top: 5%;
+    article{
+        border-radius: $borderRadius;
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        header{
+            h1{
+                box-sizing: border-box;
+                border-radius: $borderRadius;
+                border-bottom-right-radius: 0px;
+                border-bottom-left-radius: 0px;
+                display: flex;
+                align-items: center;
+                padding: 30px;
+                width: 100%;
+                margin: auto;
+                margin-top: 0px;
+                color: $color2;
+                background-color: $color1;//#DDBA3E;
+            }
+        }
+        blockquote{
+            padding: 30px 30px;
+            border-radius: $borderRadius;
+            border-top-right-radius: 0px;
+            box-sizing: border-box;
+            border-top-left-radius: 0px;
+            width: 100%;
+            margin: auto;
+            background-color: $color2;
+            color: $color1;
+            // background-color: white;
+            // color: #959595;
+            min-height: 100px;
+        }
+    }
+}
