@@ -1,25 +1,25 @@
-import React, { useEffect, useState } from 'react'
-import Post from '../components/post'
-import { connect } from 'react-redux'
-import { Redirect } from 'react-router-dom'
-import '../scss/postPage.scss'
+import React, { useEffect, useState } from "react";
+import Post from "../components/post";
+import { connect } from "react-redux";
+import { Redirect } from "react-router-dom";
+import "../scss/postPage.scss";
 
 function PostPage(props) {
-    const [post, setPost] = useState(null)
-    useEffect(() => {
-        if(!post)
-            setPost(props.posts[props.match.params['id']-1])
-    })
+  const [post, setPost] = useState(null);
+  useEffect(() => {
+    if (!post) setPost(props.posts[props.match.params["id"] - 1]);
+  });
 
-    if(!props.token)return <Redirect to="/"/>
-    if(!post)
-        return <p>Loading...............</p>
+  if (!props.token) return <Redirect to="/" />;
+  if (!post) return <p>Loading...............</p>;
 
-    return (
-        <div className='post-page'>
-            <Post title={post.title} body={post.body}></Post>
-        </div>
-    )
+  return (
+    <div className="post-page">
+      <Post title={post.title} body={post.body}></Post>
+    </div>
+  );
 }
 
-export default connect(state => {return {token : state.token, posts: state.posts}})(PostPage)
+export default connect(state => {
+  return { token: state.token, posts: state.posts };
+})(PostPage);
